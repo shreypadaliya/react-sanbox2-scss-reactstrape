@@ -1,0 +1,105 @@
+// _mixins.scss
+
+// Mixin for Button Styles
+@mixin navbar-button {
+  background-color: white;
+  border: none;
+  font-size: $font-size-p;
+  color: $primary-color;
+  line-height: 28.9px;
+  font-weight: 600;
+
+  &:hover {
+    background-image: $secondary-color !important;
+    color: $plain-white !important;
+  }
+}
+
+// Mixin for NavLink Styles
+@mixin nav-link {
+  text-decoration: none;
+  font-size: $font-size-p;
+  color: $primary-color;
+  line-height: 28.9px;
+  font-weight: 600;
+
+  &:hover {
+    color: $secondary-color;
+  }
+}
+
+// Mixin for Navbar Styles
+@mixin navbar-common-styles {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// Mixin for Mobile Flex Direction Change
+@mixin mobile-flex-direction {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
+}
+
+//home mixin
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flex-center-hv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-dir-col {
+  display: flex;
+  flex-direction: column;
+}
+
+//our feature mixing
+
+@mixin flex-every-center-ourfeat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+//perfect control
+
+@mixin flex-end-center-pc {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+@mixin flex-beet-pc {
+  display: flex;
+  justify-content: space-between;
+}
+
+// proud of 
+
+@mixin flex-all-tcenter-po {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+//semi what
+
+@mixin flex-all-semi-what {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

@@ -1,0 +1,79 @@
+$primary-color: #343f52; // Blue
+$secondary-color: linear-gradient(90deg, #f857a6, #ef3f6e);
+$accent-color: #60697b;
+$plain-white: #ffffff;
+$perple-round: #e6e5f4;
+$perple-font: #605dba;
+
+// Define font sizes
+$font-size-h1: 46px;
+$font-size-h2: 38px;
+$font-size-h3: 23px;
+$font-size-h4: 22px;
+$font-size-h6: 16px;
+$font-size-h5: 19px;
+$font-size-p: 17px;
+
+// Style headers
+h1 {
+  font-size: $font-size-h1;
+  color: $primary-color;
+  font-weight: 600;
+  line-height: 55.2px;
+  margin: 0;
+}
+
+h2 {
+  font-size: $font-size-h2;
+  color: #343f52;
+  font-weight: 600;
+  line-height: 47.5px;
+  margin: 0;
+}
+
+h3 {
+  font-size: $font-size-h3;
+  color: $accent-color;
+  font-weight: 500;
+  line-height: 34.5px;
+  margin: 0;
+}
+
+h4 {
+  font-size: $font-size-h4;
+  color: $primary-color;
+  font-weight: 600;
+  line-height: 30.8px;
+  margin: 0;
+}
+
+h5 {
+  font-size: $font-size-h5;
+  color: $primary-color;
+  font-weight: 600;
+  line-height: 28.5px;
+  margin: 0;
+}
+
+h6 {
+  font-size: $font-size-h6;
+  font-weight: 600;
+  line-height: 21.6px;
+  background-image: $secondary-color;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+}
+
+// Style paragraph
+p {
+  font-size: $font-size-p;
+  color: $accent-color;
+  line-height: 28.9px;
+  font-weight: 500;
+  margin: 0;
+}
+
+

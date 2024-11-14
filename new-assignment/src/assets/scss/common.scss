@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-  padding: 10px;
+  // padding: 10px;
 }
 
 .primary-btn {
@@ -96,9 +96,7 @@ body {
 }
 
 .navlinkholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-center-hv;
   transition: all 0.3s ease;
 }
 
@@ -147,13 +145,13 @@ body {
   background-color: #000;
 }
 
-@media (max-width: 1200px) {
+@include respond-to("large") {
   .navbuttonholder {
     gap: 40px;
   }
 }
 
-@media (max-width: 991px) {
+@include respond-to("medium") {
   .navlinkholder {
     display: none;
   }
@@ -224,7 +222,6 @@ body {
   padding: 55px;
 }
 
-/* Keyframes for moving gradient */
 @keyframes gradientAnimation {
   0% {
     background-position: 0% 50%;
@@ -279,7 +276,7 @@ body {
   right: 0;
 }
 
-@media (max-width: 1200px) {
+@include respond-to("large") {
   .Homesemimain {
     flex-direction: column;
     height: auto;
@@ -307,7 +304,7 @@ body {
   }
 }
 
-@media (max-width: 768px) {
+@include respond-to("small") {
   .home-left-section h1 {
     font-size: 1.5rem;
     line-height: 30px;
@@ -335,7 +332,7 @@ body {
   }
 }
 
-@media (max-width: 575px) {
+@include respond-to("extra-small") {
   .homeinfo h1 {
     font-size: 1.2rem;
   }
@@ -389,21 +386,21 @@ body {
   padding: 0px 18px;
 }
 
-@media (max-width: 1200px) {
+@include respond-to("large") {
   .ourfeature-section {
     margin-top: 180px;
     margin-bottom: 77px;
   }
 }
 
-@media (max-width: 768px) {
+@include respond-to("small") {
   .ourfeature-section {
     margin-top: 100px;
     margin-bottom: 100px;
   }
 }
 
-@media (max-width: 575px) {
+@include respond-to("extra-small") {
   .ourfeature-section {
     margin-top: 60px;
     margin-bottom: 60px;
@@ -444,6 +441,7 @@ body {
 
 .pconinfohead {
   margin-bottom: 16px;
+  max-width: 537.84px;
 }
 
 .pconinfosemihead {
@@ -465,11 +463,12 @@ body {
   padding: 0;
   margin-bottom: 23px;
 }
+
 .pcontrolsemimain {
   gap: 20px;
 }
 
-@media (max-width: 991px) {
+@include respond-to("medium") {
   .pcontrolsemimain {
     @include flex-every-center-ourfeat;
   }
@@ -479,7 +478,7 @@ body {
   }
 }
 
-@media (max-width: 768px) {
+@include respond-to("small") {
   .pcontrolsemimain {
     @include flex-every-center-ourfeat;
   }
@@ -512,7 +511,7 @@ body {
   }
 }
 
-@media (max-width: 576px) {
+@include respond-to("extra-small") {
   .pconinfohead {
     font-size: 1rem;
   }
@@ -525,6 +524,7 @@ body {
     font-size: 0.85rem;
     margin-bottom: 20px;
   }
+
   .perfect-control-section {
     margin-bottom: 30px;
   }
@@ -552,13 +552,12 @@ body {
 }
 
 .diffchecksemi {
-  // @include flex-center;
   display: flex;
   gap: 10px;
   margin-bottom: 15px;
 }
 
-@media (max-width: 991px) {
+@include respond-to("medium") {
   .difference-section {
     @include flex-every-center-ourfeat;
   }
@@ -589,6 +588,7 @@ body {
   line-height: 35px;
   color: $primary-color;
 }
+
 .counter-text span {
   color: $primary-color;
   font-size: 25px;
@@ -608,6 +608,7 @@ body {
   bottom: 88px;
   left: -90px;
 }
+
 .chart-container {
   display: flex;
   flex-direction: column;
@@ -621,23 +622,27 @@ body {
   text-align: center;
   position: relative;
 }
+
 .semi-circle-chart {
   width: 80%;
   height: auto;
   margin-top: -60px;
 }
+
 .chart-text {
   position: absolute;
   top: 63%;
   transform: translateY(-50%);
   text-align: center;
 }
+
 .percentage {
   font-size: 40px;
   font-weight: 500;
   color: $primary-color;
   line-height: 40px;
 }
+
 .persentagesymbole {
   font-size: 20px;
   font-weight: 500;
@@ -652,7 +657,7 @@ body {
   line-height: 29px;
 }
 
-@media (max-width: 768px) {
+@include respond-to("small") {
   .counter-container {
     display: none;
   }
@@ -689,11 +694,9 @@ body {
   0% {
     background-position: 0% 50%;
   }
-
   50% {
     background-position: 100% 50%;
   }
-
   100% {
     background-position: 0% 50%;
   }
@@ -728,6 +731,7 @@ body {
   font-size: 41px;
   color: $primary-color;
 }
+
 .proudgridtextsubtitele {
   font-weight: 500;
   line-height: 28.9px;
@@ -744,10 +748,12 @@ body {
   width: 100%;
   justify-content: space-between;
 }
+
 .pcardcolmain {
   @include flex-dir-col;
   align-items: center;
 }
+
 .pcardholder {
   @include flex-dir-col;
   max-width: 300px;
@@ -777,6 +783,7 @@ body {
   color: $primary-color;
   margin-bottom: 5px;
 }
+
 .pclassrole {
   font-weight: 600;
   font-size: 17px;
@@ -784,8 +791,7 @@ body {
   color: $accent-color;
 }
 
-/* Responsive adjustments */
-@media (max-width: 1200px) {
+@include respond-to("large") {
   .proudcon {
     flex-direction: column;
     align-items: center;
@@ -802,13 +808,14 @@ body {
     max-width: 100%;
     gap: 20px;
   }
+
   .proudoff-cardsection {
     margin-top: -60px;
     z-index: 6;
   }
 }
 
-@media (max-width: 992px) {
+@include respond-to("medium") {
   .proudgridwrap {
     gap: 10px;
   }
@@ -828,7 +835,7 @@ body {
   }
 }
 
-@media (max-width: 768px) {
+@include respond-to("small") {
   .proudhead {
     font-size: 1.8rem;
     max-width: 100%;
@@ -852,16 +859,18 @@ body {
     padding: 30px;
     margin: 0 auto;
   }
+
   .proudoff-cardsection {
     margin-top: -60px;
     z-index: 6;
   }
+
   .flip-card {
     height: 415.36px;
   }
 }
 
-@media (max-width: 576px) {
+@include respond-to("extra-small") {
   .proudgrid {
     flex-direction: column;
     align-items: center;
@@ -898,6 +907,7 @@ body {
   .proudof-section {
     height: auto;
   }
+
   .proudoff-cardsection {
     margin-top: 20px;
     z-index: 6;
@@ -907,12 +917,15 @@ body {
   .pcardholder {
     background-image: $secondary-color;
   }
+
   .pcardtitle {
     color: $plain-white;
   }
+
   .pclassname {
     color: $plain-white;
   }
+
   .pclassrole {
     color: $plain-white;
   }
@@ -966,7 +979,7 @@ body {
   padding: 44px 40px;
 }
 
-@media (max-width: 576px) {
+@include respond-to("extra-small") {
   .flip-card-back .pcardholder {
     background-image: var(--secondary-color);
     color: var(--plain-white);
@@ -1021,19 +1034,8 @@ body {
   max-width: 604.65px;
 }
 
-@media (max-width: 991px) {
-  .whoweare-section {
-    flex-direction: column;
-  }
-
-  .whoimg1,
-  .whoimg2,
-  .whoimg3 {
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 991px) {
+// Use mixin for large screens and below
+@include respond-to("medium") {
   .whoweare-section {
     flex-direction: column;
     gap: 40px;
@@ -1061,7 +1063,7 @@ body {
   }
 }
 
-@media (max-width: 576px) {
+@include respond-to("extra-small") {
   .whoweare-section {
     flex-direction: column;
     gap: 30px;
@@ -1105,15 +1107,16 @@ body {
   gap: 20px;
   max-width: 386.93px;
 }
+
 .oneholder {
   border-radius: 44px;
   background-color: $perple-round;
   color: $perple-font;
   height: 44px;
   width: 44px;
-  font-weight: 18px;
+  font-weight: 600;
   line-height: 18px;
-  font-size: 600;
+  font-size: 18px;
   @include flex-all-semi-what;
 }
 
@@ -1125,7 +1128,7 @@ body {
   margin-bottom: 14px;
 }
 
-@media (max-width: 768px) {
+@include respond-to("small") {
   .semiwhatconrow {
     @include flex-center;
     flex-wrap: wrap;
@@ -1140,23 +1143,20 @@ body {
     align-items: center;
   }
 
-  .semiwhatconrow {
-    @include flex-center;
-  }
   .whoweare-grid-section {
     margin-top: 40px;
     margin-bottom: 60px;
   }
 }
 
-@media (max-width: 991px) {
+@include respond-to("medium") {
   .whoweare-grid-section {
     margin-top: 55px;
     margin-bottom: 90px;
   }
 }
 
-@media (max-width: 575px) {
+@include respond-to("extra-small") {
   .whoweare-grid-section {
     margin-top: 30px;
     margin-bottom: 30px;
@@ -1199,12 +1199,13 @@ body {
   font-weight: 500;
   margin: 0;
 }
+
 .consecondmar {
   margin-top: 24px;
   margin-bottom: 24px;
 }
 
-@media (max-width: 991px) {
+@include respond-to("medium") {
   .contact-section {
     flex-direction: column;
     align-items: flex-start;
@@ -1235,7 +1236,6 @@ body {
 
   .consubinfo h5 {
     font-size: 1rem;
-    // margin-bottom: 5px;
   }
 
   .consubinfo p {
@@ -1252,18 +1252,19 @@ body {
     width: 100%;
     margin-bottom: 20px;
   }
+
   .contact-section {
     margin-bottom: 70px;
   }
 }
 
-@media (max-width: 778px) {
+@include respond-to("small") {
   .contact-section {
     margin-bottom: 50px;
   }
 }
 
-@media (max-width: 575px) {
+@include respond-to("extra-small") {
   .contact-section {
     margin-bottom: 40px;
   }
@@ -1326,7 +1327,7 @@ body {
   margin-bottom: 36px;
 }
 
-@media (max-width: 991px) {
+@include respond-to("medium") {
   .joincomsubhead {
     font-size: 1.2rem;
     line-height: 1.5;
@@ -1342,7 +1343,7 @@ body {
   }
 }
 
-@media (max-width: 576px) {
+@include respond-to("extra-small") {
   .joincomsubhead {
     font-size: 1rem;
     line-height: 1.4;
@@ -1401,8 +1402,7 @@ body {
   flex-wrap: wrap;
 }
 
-@media (max-width: 992px) {
-  /* md breakpoint */
+@include respond-to("medium") {
   .footdiv1,
   .foothead,
   .footformsub,
@@ -1418,7 +1418,7 @@ body {
   }
 }
 
-@media (max-width: 768px) {
+@include respond-to("small") {
   .footdiv1,
   .foothead,
   .footformsub,
@@ -1444,8 +1444,6 @@ body {
   line-height: 25.5px;
   border: none;
 }
-
-//case study
 
 .carousel-slide {
   padding: 15px;

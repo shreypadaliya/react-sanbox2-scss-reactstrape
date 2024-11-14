@@ -1,16 +1,17 @@
 import React from "react";
-import whoweimg1 from "../assets/Figure g13.png";
-import whoweimg2 from "../assets/Figure g12.png";
-import whoweimg3 from "../assets/Figure g11.png";
+import whoweimg1 from "../../assets/images/Figure g13.png";
+import whoweimg2 from "../../assets/images/Figure g12.png";
+import whoweimg3 from "../../assets/images/Figure g11.png";
+import rcircle from "../../assets/images/List  Item.png";
 import { Container, Row, Col } from "reactstrap";
-import rcircle from "../assets/List  Item.png";
+
 
 const Whoweare = () => {
   return (
     <>
       <Container>
-        <div className="whomain">
-          <div className="whoimgmain">
+        <section className="whoweare-section" data-aos="fade-up">
+          <div className="whoweare-left-imagesection">
             <div className="whowrap1">
               <div>
                 <img src={whoweimg2} alt="" className="whoimg1" />
@@ -23,7 +24,7 @@ const Whoweare = () => {
               <img src={whoweimg3} alt="" className="whoimg3" />
             </div>
           </div>
-          <div className="pconinfomain">
+          <div className="whoweare-right-section">
             <div className="whoweinfosemimain">
               <h6 className="pconinfohead">Who Are We?</h6>
               <h2 className="whoweinfosemihead">
@@ -93,56 +94,11 @@ const Whoweare = () => {
               </Row>
             </div>
           </div>
-        </div>
+        </section>
       </Container>
-      {/* <Container className="semiwhatcon">
-        <Row style={{ margin: "0px" }} className="semiwhatconrow">
-          <Col>
-            <div className="visionmain">
-              <div>
-                <div className="oneholder">1</div>
-              </div>
-              <div>
-                <div className="visiontitle">Our Vision</div>
-                <p className="visionsubtitle">
-                  Nulla vitae elit libero, a pharetra augue. Donec id elit non
-                  mi porta gravida at eget. Fusce dapibus tellus.
-                </p>
-              </div>
-            </div>
-          </Col>
-          <Col>
-            <div className="visionmain">
-              <div>
-                <div className="oneholder">2</div>
-              </div>
-              <div>
-                <div className="visiontitle">Our Mission</div>
-                <p className="visionsubtitle">
-                  Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel
-                  augue laoreet. Sed posuere consectetur.
-                </p>
-              </div>
-            </div>
-          </Col>
-          <Col>
-            <div className="visionmain">
-              <div>
-                <div className="oneholder">3</div>
-              </div>
-              <div>
-                <div className="visiontitle">Our Values</div>
-                <p className="visionsubtitle">
-                  Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                  Praesent commodo cursus magna scelerisque.
-                </p>
-              </div>
-            </div>
-          </Col>
-        </Row>
-      </Container> */}
-      <Container className="semiwhatcon">
-        <Row style={{ margin: "0px" }} className="semiwhatconrow">
+
+      <Container className="whoweare-grid-section">
+        <Row className="semiwhatconrow">
           <Col xs="12" sm="6" lg="4" className="semiwhatconrow">
             <div className="visionmain">
               <div>

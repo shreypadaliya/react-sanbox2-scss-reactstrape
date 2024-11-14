@@ -1,5 +1,5 @@
 @import "variable";
-@import "Mixin";
+@import "mixin";
 
 * {
   padding: 0;
@@ -12,23 +12,27 @@ body {
 }
 
 .container {
-  padding: 0;
+  padding: 10px;
 }
 
-.custom-btn {
+.primary-btn {
   background-image: $secondary-color !important;
   color: $plain-white !important;
   font-size: 17px;
   font-weight: 600;
   line-height: 28.9px;
   border: none;
-  // max-width: 151.47px;
+  max-width: 151.47px;
+  height: 58.89px;
   padding: 20px 28px;
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  @include flex-center;
 }
 
-.custom-btn .ripple {
+.primary-btn .ripple {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -45,24 +49,23 @@ body {
   }
 }
 
-.custom-btn2 {
+.form-btn {
   background-image: $secondary-color !important;
   color: $plain-white !important;
   font-size: 17px;
   font-weight: 600;
   line-height: 28.9px;
   border: none;
-  // max-width: 151.47px;
-  // padding: 20px 28px;
   position: relative;
   overflow: hidden;
+  border-radius: 0px 8px 8px 0px;
 }
 
-.custom-btn2 .ripple {
+.form-btn .ripple {
   position: absolute;
   width: 20px;
   height: 20px;
-  border-radius: 50%;
+  
   background-color: rgba(255, 255, 255, 0.6);
   transform: scale(0);
   animation: ripple-animation 0.6s ease-out;
@@ -89,6 +92,7 @@ body {
 
 .navmain {
   @include navbar-common-styles;
+  height: 76.89px;
 }
 
 .navlinkholder {
@@ -196,13 +200,13 @@ body {
   max-width: 250px;
 }
 
-.navbarbutton {
+.secondry-btn {
   @include navbar-button;
 }
 
 //Home page
 
-.Homemain {
+.home-section {
   @include flex-center;
   width: 100%;
 }
@@ -213,7 +217,7 @@ body {
   height: 642.95px;
   width: 100%;
   flex-wrap: wrap;
-  background: linear-gradient(45deg, #ffe5e5, #b3d9ff, #e0f7fa, #ffe5e5);
+  background: linear-gradient(45deg, #ffccff, #b3d9ff, #e0f7fa, #ffccff);
   background-size: 400% 400%;
   animation: gradientAnimation 15s ease infinite;
   border-radius: 16px;
@@ -235,7 +239,7 @@ body {
   }
 }
 
-.homeinfo {
+.home-left-section {
   @include flex-dir-col;
   max-width: 680px;
   width: 50%;
@@ -245,12 +249,24 @@ body {
   margin-bottom: 23px;
 }
 
+.solution {
+  font-size: 46px;
+  line-height: 55.2px;
+  font-weight: 600;
+  background-image: $secondary-color;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  text-align: left;
+}
+
 .infosub {
   max-width: 464.7px;
   margin-bottom: 38px;
 }
 
-.homeimgholder {
+.home-right-section {
   position: relative;
   width: 50%;
 }
@@ -269,13 +285,13 @@ body {
     height: auto;
   }
 
-  .homeinfo {
+  .home-left-section {
     width: 100%;
     max-width: 100%;
     margin-bottom: 20px;
   }
 
-  .homeimgholder {
+  .home-right-section {
     width: 100%;
     position: relative;
     @include flex-center;
@@ -292,7 +308,7 @@ body {
 }
 
 @media (max-width: 768px) {
-  .homeinfo h1 {
+  .home-left-section h1 {
     font-size: 1.5rem;
     line-height: 30px;
     text-align: left;
@@ -302,7 +318,7 @@ body {
     padding: 25px;
   }
 
-  .homeinfo h3 {
+  .home-left-section h3 {
     font-size: 1rem;
     line-height: 30px;
     text-align: left;
@@ -319,7 +335,7 @@ body {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 575px) {
   .homeinfo h1 {
     font-size: 1.2rem;
   }
@@ -341,15 +357,19 @@ body {
 
 // ourfeature
 
-.ourfeaturemain {
+.ourfeature-section {
   @include flex-every-center-ourfeat;
-  margin-top: 219px;
+  margin-top: 360px;
   margin-bottom: 144px;
   text-align: center;
 }
 
 .ourfeaturesemimain {
   @include flex-every-center-ourfeat;
+}
+
+.ourfeatrow {
+  margin: 0;
 }
 
 .ourfeaturesub {
@@ -366,14 +386,36 @@ body {
 
 .ourfeatcol {
   margin-bottom: 44px;
-  padding: 0;
+  padding: 0px 18px;
+}
+
+@media (max-width: 1200px) {
+  .ourfeature-section {
+    margin-top: 180px;
+    margin-bottom: 77px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ourfeature-section {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width: 575px) {
+  .ourfeature-section {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
 }
 
 //perfect control
 
-.pcontrolmain {
+.perfect-control-section {
   @include flex-end-center-pc;
   margin-bottom: 160px;
+  width: 100%;
 }
 
 .pcontrolsemimain {
@@ -387,7 +429,7 @@ body {
   max-width: 600px;
 }
 
-.pconinfomain {
+.perfect-control-leftsection {
   @include flex-end-center-pc;
   flex-direction: column;
   margin-top: 20px;
@@ -431,6 +473,10 @@ body {
   .pcontrolsemimain {
     @include flex-every-center-ourfeat;
   }
+
+  .perfect-control-section {
+    margin-bottom: 80px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -460,6 +506,10 @@ body {
   .pcongrid {
     width: 100%;
   }
+
+  .perfect-control-section {
+    margin-bottom: 50px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -475,11 +525,14 @@ body {
     font-size: 0.85rem;
     margin-bottom: 20px;
   }
+  .perfect-control-section {
+    margin-bottom: 30px;
+  }
 }
 
 //different
 
-.diffmain {
+.difference-section {
   @include flex-beet-pc;
   gap: 20px;
 }
@@ -493,7 +546,7 @@ body {
   @include flex-center;
 }
 
-.diffsemisubmain {
+.difference-left-section {
   @include flex-dir-col;
   max-width: 554.16px;
 }
@@ -506,14 +559,111 @@ body {
 }
 
 @media (max-width: 991px) {
-  .diffmain {
+  .difference-section {
     @include flex-every-center-ourfeat;
+  }
+}
+
+.counter-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 207.66px;
+  height: 99px;
+  border-radius: 8px;
+  box-shadow: 0px 5px 35px 0px rgba(30, 34, 40, 0.07);
+  background-color: $plain-white;
+  gap: 15px;
+  position: absolute;
+  top: 88px;
+  left: -70px;
+}
+
+.diffimg {
+  position: relative;
+}
+
+.counter-text {
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 35px;
+  color: $primary-color;
+}
+.counter-text span {
+  color: $primary-color;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 35px;
+}
+
+/* TimeSavedChart.css */
+
+.chart-containermain {
+  width: 100%;
+  display: flex;
+  max-width: 230px;
+  height: 180px;
+  width: 100%;
+  position: absolute;
+  bottom: 88px;
+  left: -90px;
+}
+.chart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 230px;
+  height: 180px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+}
+.semi-circle-chart {
+  width: 80%;
+  height: auto;
+  margin-top: -60px;
+}
+.chart-text {
+  position: absolute;
+  top: 63%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+.percentage {
+  font-size: 40px;
+  font-weight: 500;
+  color: $primary-color;
+  line-height: 40px;
+}
+.persentagesymbole {
+  font-size: 20px;
+  font-weight: 500;
+  color: $primary-color;
+  line-height: 20px;
+}
+
+.chart-text p {
+  font-size: 20px;
+  font-weight: 600;
+  color: $primary-color;
+  line-height: 29px;
+}
+
+@media (max-width: 768px) {
+  .counter-container {
+    display: none;
+  }
+  .chart-containermain {
+    display: none;
   }
 }
 
 //proud off
 
-.proudwrap {
+.proudof-section {
   width: 100%;
   @include flex-center;
   height: 458.19px;
@@ -521,20 +671,15 @@ body {
   z-index: 3;
 }
 
-.proudmain {
-  max-width: 1470px;
-  width: 100%;
-}
-
 .proudcon {
   @include flex-beet-pc;
   margin-top: 90px;
 }
 
-.proudmain {
+.proudof-infosection {
   max-width: 1470px;
   width: 100%;
-  background: linear-gradient(45deg, #ffe5e5, #b3d9ff, #e0f7fa, #ffe5e5);
+  background: linear-gradient(45deg, #ffccff, #b3d9ff, #e0f7fa, #ffccff);
   background-size: 400% 400%;
   animation: gradientAnimation 15s ease infinite;
   border-radius: 16px;
@@ -590,7 +735,7 @@ body {
   color: $accent-color;
 }
 
-.prodcardcon {
+.proudoff-cardsection {
   margin-top: -140px;
   z-index: 6;
 }
@@ -657,7 +802,7 @@ body {
     max-width: 100%;
     gap: 20px;
   }
-  .prodcardcon {
+  .proudoff-cardsection {
     margin-top: -60px;
     z-index: 6;
   }
@@ -668,7 +813,7 @@ body {
     gap: 10px;
   }
 
-  .prodcardcon {
+  .proudoff-cardsection {
     margin-top: -80px;
   }
 
@@ -677,7 +822,7 @@ body {
     margin-bottom: 20px;
   }
 
-  .prodcardcon {
+  .proudoff-cardsection {
     margin-top: -60px;
     z-index: 6;
   }
@@ -707,7 +852,7 @@ body {
     padding: 30px;
     margin: 0 auto;
   }
-  .prodcardcon {
+  .proudoff-cardsection {
     margin-top: -60px;
     z-index: 6;
   }
@@ -722,7 +867,7 @@ body {
     align-items: center;
   }
 
-  .prodcardcon {
+  .proudoff-cardsection {
     margin-top: -60px;
   }
 
@@ -750,10 +895,10 @@ body {
     font-size: 0.9rem;
   }
 
-  .proudwrap {
+  .proudof-section {
     height: auto;
   }
-  .prodcardcon {
+  .proudoff-cardsection {
     margin-top: 20px;
     z-index: 6;
     @include flex-center;
@@ -834,14 +979,14 @@ body {
 
 //whowe are
 
-.whomain {
+.whoweare-section {
   display: flex;
   width: 100%;
   gap: 70px;
   margin-top: 200px;
 }
 
-.whoimgmain {
+.whoweare-left-imagesection {
   @include flex-every-center-ourfeat;
 }
 
@@ -877,7 +1022,7 @@ body {
 }
 
 @media (max-width: 991px) {
-  .whomain {
+  .whoweare-section {
     flex-direction: column;
   }
 
@@ -889,7 +1034,7 @@ body {
 }
 
 @media (max-width: 991px) {
-  .whomain {
+  .whoweare-section {
     flex-direction: column;
     gap: 40px;
   }
@@ -917,7 +1062,7 @@ body {
 }
 
 @media (max-width: 576px) {
-  .whomain {
+  .whoweare-section {
     flex-direction: column;
     gap: 30px;
   }
@@ -946,7 +1091,7 @@ body {
 
 //semi what
 
-.semiwhatcon {
+.whoweare-grid-section {
   margin-top: 70px;
   margin-bottom: 154px;
 }
@@ -998,17 +1143,35 @@ body {
   .semiwhatconrow {
     @include flex-center;
   }
+  .whoweare-grid-section {
+    margin-top: 40px;
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 991px) {
+  .whoweare-grid-section {
+    margin-top: 55px;
+    margin-bottom: 90px;
+  }
+}
+
+@media (max-width: 575px) {
+  .whoweare-grid-section {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
 }
 
 //contactus
 
-.conmain {
+.contact-section {
   @include navbar-common-styles;
   margin-bottom: 160px;
   gap: 30px;
 }
 
-.coninfomain {
+.contact-right-section {
   @include flex-dir-col;
   max-width: 543.75px;
 }
@@ -1027,20 +1190,29 @@ body {
   display: flex;
   gap: 20px;
 }
+
+.conaddress{
+  text-decoration: none;
+  font-size: $font-size-p;
+  color: $accent-color;
+  line-height: 28.9px;
+  font-weight: 500;
+  margin: 0;
+}
 .consecondmar {
   margin-top: 24px;
   margin-bottom: 24px;
 }
 
 @media (max-width: 991px) {
-  .conmain {
+  .contact-section {
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
     padding: 0 20px;
   }
 
-  .coninfomain {
+  .contact-right-section {
     max-width: 100%;
     padding: 0 20px;
   }
@@ -1063,7 +1235,7 @@ body {
 
   .consubinfo h5 {
     font-size: 1rem;
-    margin-bottom: 5px;
+    // margin-bottom: 5px;
   }
 
   .consubinfo p {
@@ -1079,6 +1251,24 @@ body {
   .conimg {
     width: 100%;
     margin-bottom: 20px;
+  }
+  .contact-section {
+    margin-bottom: 70px;
+    
+  }
+}
+
+@media (max-width: 778px) {
+  .contact-section {
+    margin-bottom: 50px;
+    
+  }
+}
+
+@media (max-width: 575px) {
+  .contact-section {
+    margin-bottom: 40px;
+    
   }
 }
 
@@ -1102,22 +1292,23 @@ body {
 
 //join community
 
-.joincomsubhead {
-  max-width: 671.31px;
-  margin-top: 16px;
-  margin-bottom: 36px;
-}
 
-.joincommain {
+
+.joincomunity-section {
   @include flex-center-hv;
   flex-direction: column;
   text-align: center;
   padding: 90px 0px;
-  background: linear-gradient(45deg, #ffe5e5, #b3d9ff, #e0f7fa, #ffe5e5);
+  background: linear-gradient(45deg, #ffccff, #b3d9ff, #e0f7fa, #ffccff);
   background-size: 400% 400%;
   animation: gradientAnimation 15s ease infinite;
   border-radius: 16px;
   margin-bottom: 90px;
+}
+
+.joincom-buttonwrapper{
+  display: flex;
+  justify-content: center;
 }
 
 @keyframes gradientAnimation {
@@ -1134,6 +1325,13 @@ body {
   }
 }
 
+.joincomsubhead {
+  max-width: 671.31px;
+  margin-top: 16px;
+  margin-bottom: 36px;
+}
+
+
 @media (max-width: 991px) {
   .joincomsubhead {
     font-size: 1.2rem;
@@ -1145,7 +1343,7 @@ body {
     line-height: 1.4;
   }
 
-  .joincommain {
+  .joincomunity-section {
     padding: 70px 20px;
   }
 }
@@ -1161,14 +1359,14 @@ body {
     line-height: 1.3;
   }
 
-  .joincommain {
+  .joincomunity-section {
     padding: 50px 10px;
   }
 }
 
 //footer
 
-.footermain {
+.footer-section {
   width: 100%;
   background-color: $plain-white;
   margin-bottom: 104px;
@@ -1280,13 +1478,11 @@ body {
   color: $accent-color;
 }
 
-/* Hide both the slick prev and slick next arrows */
 .slick-prev,
 .slick-next {
   display: none !important;
 }
 
-/* Styling for the Slick dots */
 .slick-dots li button {
   width: 10px;
   height: 10px;
@@ -1321,7 +1517,7 @@ body {
   text-align: center;
 }
 
-.casemainwrap {
+.casestudy-section {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1346,9 +1542,12 @@ body {
     font-size: 16px;
     line-height: 1.5;
   }
+  .casestudy-section {
+    margin-top: 50px;
+  }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 575px) {
   .casemainwrahead {
     font-size: 16px;
     line-height: 1.3;
@@ -1357,5 +1556,8 @@ body {
   .casemainwrapara {
     font-size: 14px;
     line-height: 1.4;
+  }
+  .casestudy-section {
+    margin-top: 40px;
   }
 }

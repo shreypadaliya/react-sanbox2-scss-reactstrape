@@ -18,16 +18,20 @@ const Joincom = () => {
     });
   };
   return (
-    <Container className="joincommain">
-      <div>
-        <h6 className="joinchead">Join Our Community</h6>
-        <h2 className="joincomsubhead">
-          We are trusted by over 5000+ clients. Join them now and grow your
-          business.
-        </h2>
-        <Button className="custom-btn" onClick={handleRippleEffect}>
-          Get Started
-        </Button>
+    <Container>
+      <div className="joincomunity-section" data-aos="fade-up">
+        <div className="joincomunity-content-wraper">
+          <h6 className="joinchead">Join Our Community</h6>
+          <h2 className="joincomsubhead">
+            We are trusted by over 5000+ clients. Join them now and grow your
+            business.
+          </h2>
+          <div className="joincom-buttonwrapper">
+            <Button className="primary-btn" onClick={handleRippleEffect}>
+              Get Started
+            </Button>
+          </div>
+        </div>
       </div>
     </Container>
   );

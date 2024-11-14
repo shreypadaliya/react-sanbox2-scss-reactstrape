@@ -1,17 +1,17 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
-import { Icon } from "../components/Svgicon";
+import { Icon } from "../../components/common-componets/Svgicon";
 
 const Ourfeature = () => {
   return (
-    <div className="ourfeaturemain">
+    <section className="ourfeature-section">
       <div className="ourfeaturesemimain">
         <h6>Our Features</h6>
         <h2 className="ourfeaturesub">
           The service we offer is specifically designed to meet your needs.
         </h2>
         <Container>
-          <Row style={{ margin: "0px" }}>
+          <Row className="ourfeatrow" data-aos="fade-up">
             <Col lg="4" md="6" sm="12" className="ourfeatcol">
               <div className="ourfeatinfo">
                 <div>
@@ -129,7 +129,7 @@ const Ourfeature = () => {
           </Row>
         </Container>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,32 +1,24 @@
-import React from "react";
-import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
-import Ourfeature from "./pages/Ourfeature";
-import Pcontrol from "./pages/Pcontrol";
-import Different from "./pages/Different";
-import Proudoff from "./pages/Proudoff";
-import Whoweare from "./pages/Whoweare";
-import Joincom from "./pages/Joincom";
-import Contact from "./pages/Contact";
-import Footer from "./pages/Footer";
-import Casestudy from "./pages/Casestudy";
+import React, { useEffect } from 'react'
+import Homepage from '../src/pages/homepage'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const App = () => {
+  
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,  
+      easing: 'ease-in-out',  
+      once: true,  
+    });
+  }, []);
+
   return (
     <div>
-      <Navbar />
-      <Home />
-      <Ourfeature />
-      <Pcontrol />
-      <Different />
-      <Proudoff />
-      <Casestudy />
-      <Whoweare />
-      <Contact />
-      <Joincom />
-      <Footer />
+      <Homepage/>
     </div>
-  );
-};
+  )
+}
 
-export default App;
+
+export default App

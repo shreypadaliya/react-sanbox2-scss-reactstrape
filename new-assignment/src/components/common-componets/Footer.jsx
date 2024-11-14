@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Input, Button } from "reactstrap";
-import footlogo from "../assets/LOGO/logo-dark.png.png";
+import footlogo from "../../assets/images/LOGO/logo-dark.png.png";
 
 const Footer = () => {
   const handleRippleEffect = (e) => {
@@ -20,11 +20,12 @@ const Footer = () => {
   };
 
   return (
-    <footer className="footermain">
-      <Container className="footcustomdiv">
-        <Row className="flex flex-wrap">
+    <footer className="footer-section" data-aos="fade-up">
+      <Container >
+        <div className="footcustomdiv">
+        <Row className="">
           {/* Company Info */}
-          <Col xs="12" md="6" lg="3" style={{ padding: "0px" }}>
+          <Col xs="12" md="6" lg="3" >
             <div className="footdiv1">
               <div className="gootweblogo">
                 <img src={footlogo} alt="" />
@@ -37,7 +38,7 @@ const Footer = () => {
           </Col>
 
           {/* Contact Info */}
-          <Col xs="12" md="6" lg="3" style={{ padding: "0px" }}>
+          <Col xs="12" md="6" lg="3" >
             <div className="foothead">Get in Touch</div>
             <div>
               <p className="footlist">Moonshine St. 14/05</p>
@@ -49,7 +50,7 @@ const Footer = () => {
           </Col>
 
           {/* Links */}
-          <Col xs="12" md="6" lg="3" style={{ padding: "0px" }}>
+          <Col xs="12" md="6" lg="3" >
             <div className="foothead">Learn More</div>
             <ul style={{ padding: "0px" }}>
               <li className="no-bullets">
@@ -81,7 +82,7 @@ const Footer = () => {
           </Col>
 
           {/* Newsletter */}
-          <Col xs="12" md="6" lg="3" style={{ padding: "0px" }}>
+          <Col xs="12" md="6" lg="3" >
             <div className="foothead">Our Newsletter</div>
             <p className="footformsub">
               Subscribe to our newsletter to get our news & deals delivered to
@@ -92,13 +93,14 @@ const Footer = () => {
                 <Input type="email" placeholder="Email Address" className="" />
               </div>
               <div>
-                <Button className="custom-btn2" onClick={handleRippleEffect}>
+                <Button className="form-btn" onClick={handleRippleEffect}>
                   Join
                 </Button>
               </div>
             </div>
           </Col>
         </Row>
+        </div>
       </Container>
     </footer>
   );

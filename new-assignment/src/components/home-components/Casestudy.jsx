@@ -3,9 +3,9 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Container } from "reactstrap";
-import sliderimg1 from "../assets/Link  b4.jpg.png";
-import sliderimg2 from "../assets/Figure.png";
-import sliderimg3 from "../assets/Link → b6.jpg.png";
+import sliderimg1 from "../../assets/images/Link  b4.jpg.png";
+import sliderimg2 from "../../assets/images/Figure.png";
+import sliderimg3 from "../../assets/images/Link → b6.jpg.png";
 
 const Carousel = () => {
   const slides = [
@@ -74,7 +74,7 @@ const Carousel = () => {
 
   return (
     <>
-      <div className="casemainwrap">
+      <div className="casestudy-section" data-aos="fade-up">
         <h6 className="casemainwrahead">Case Studies</h6>
         <h2 className="casemainwrapara">
           Check out some of our awesome projects with creative ideas and great

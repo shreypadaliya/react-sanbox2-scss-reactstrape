@@ -30,7 +30,7 @@ const Header = () => {
 
   return (
     <Container>
-      <Navbar className="navmain" data-aos="fade-up">
+      <Navbar className="navmain" >
         <div className="navlogoimgholder">
           <img src={navlogo} alt="Logo" className="navimg" />
         </div>

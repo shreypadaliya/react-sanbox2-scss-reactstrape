@@ -1,7 +1,5 @@
 // Mixin for Button Styles
 
-
-
 @mixin navbar-button {
   background-color: white;
   border: none;
@@ -72,7 +70,6 @@
   align-items: center;
 }
 
-
 //perfect control
 
 @mixin flex-end-center-pc {
@@ -86,7 +83,7 @@
   justify-content: space-between;
 }
 
-// proud of 
+// proud of
 
 @mixin flex-all-tcenter-po {
   display: flex;
@@ -105,15 +102,22 @@
   text-align: center;
 }
 
-
 @mixin respond-to($breakpoint) {
   @if $breakpoint == "large" {
-    @media (max-width: 1200px) { @content; }
+    @media (max-width: 1200px) {
+      @content;
+    }
   } @else if $breakpoint == "medium" {
-    @media (max-width: 991px) { @content; }
+    @media (max-width: 991px) {
+      @content;
+    }
   } @else if $breakpoint == "small" {
-    @media (max-width: 768px) { @content; }
+    @media (max-width: 768px) {
+      @content;
+    }
   } @else if $breakpoint == "extra-small" {
-    @media (max-width: 575px) { @content; }
+    @media (max-width: 575px) {
+      @content;
+    }
   }
 }

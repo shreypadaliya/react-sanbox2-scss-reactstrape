@@ -3,6 +3,7 @@ import Homepage from '../src/pages/homepage'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+
 const App = () => {
   
   useEffect(() => {

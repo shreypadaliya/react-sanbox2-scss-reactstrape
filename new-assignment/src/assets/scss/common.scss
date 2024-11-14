@@ -65,7 +65,7 @@ body {
   position: absolute;
   width: 20px;
   height: 20px;
-  
+
   background-color: rgba(255, 255, 255, 0.6);
   transform: scale(0);
   animation: ripple-animation 0.6s ease-out;
@@ -1191,7 +1191,7 @@ body {
   gap: 20px;
 }
 
-.conaddress{
+.conaddress {
   text-decoration: none;
   font-size: $font-size-p;
   color: $accent-color;
@@ -1254,21 +1254,18 @@ body {
   }
   .contact-section {
     margin-bottom: 70px;
-    
   }
 }
 
 @media (max-width: 778px) {
   .contact-section {
     margin-bottom: 50px;
-    
   }
 }
 
 @media (max-width: 575px) {
   .contact-section {
     margin-bottom: 40px;
-    
   }
 }
 
@@ -1292,8 +1289,6 @@ body {
 
 //join community
 
-
-
 .joincomunity-section {
   @include flex-center-hv;
   flex-direction: column;
@@ -1306,7 +1301,7 @@ body {
   margin-bottom: 90px;
 }
 
-.joincom-buttonwrapper{
+.joincom-buttonwrapper {
   display: flex;
   justify-content: center;
 }
@@ -1330,7 +1325,6 @@ body {
   margin-top: 16px;
   margin-bottom: 36px;
 }
-
 
 @media (max-width: 991px) {
   .joincomsubhead {
@@ -1438,6 +1432,17 @@ body {
   .footform {
     justify-content: center;
   }
+}
+
+.footer-input {
+  box-shadow: 0px 0px 25px rgba(30, 34, 40, 0.04);
+  height: 41px;
+  border-radius: 8px 0px 0px 8px;
+  background-color: $plain-white;
+  color: #959ca9;
+  font-size: 15px;
+  line-height: 25.5px;
+  border: none;
 }
 
 //case study

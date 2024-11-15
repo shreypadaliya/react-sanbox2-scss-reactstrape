@@ -28,10 +28,10 @@ const Different = () => {
           <div className="diffsemimain">
             <div className="difference-left-section">
               <h6 className="pconinfohead">What Makes Us Different?</h6>
-              <h2 className="pconinfosemihead">
+              <h2 className="pconinfosemihead diffinfosemihead">
                 We make spending stress free so you have the perfect control.
               </h2>
-              <p className="pconinfosubtitle">
+              <p className="pconinfosubtitle diffinfosubtitle">
                 Etiam porta sem malesuada magna mollis euismod. Donec
                 ullamcorper nulla non metus auctor fringilla. Morbi leo risus,
                 porta ac consectetur ac, vestibulum at eros. Fusce dapibus,

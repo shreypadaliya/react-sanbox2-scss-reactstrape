@@ -82,7 +82,7 @@ const Carousel = () => {
         </h2>
       </div>
       <Container>
-        <div className="carousel-container" style={{ backgroundColor: "red" }}>
+        <div className="carousel-container">
           <Slider {...settings}>
             {slides.map((slide, index) => (
               <div key={index} className="carousel-slide">

@@ -39,8 +39,8 @@ const Whoweare = () => {
                 lacinia bibendum nulla sed.
               </p>
               <Row style={{ margin: "0px" }}>
-                <Col xs="12" sm="6" className="pcongrid">
-                  <div className="pconinfosemigrid">
+                <Col xs="12" sm="6" className="diffsmallgrid">
+                  <div className="diffinfosemigrid">
                     <div>
                       <img src={rcircle} alt="" />
                     </div>
@@ -52,8 +52,8 @@ const Whoweare = () => {
                     </div>
                   </div>
                 </Col>
-                <Col xs="12" sm="6" className="pcongrid">
-                  <div className="pconinfosemigrid">
+                <Col xs="12" sm="6" className="diffsmallgrid">
+                  <div className="diffinfosemigrid">
                     <div>
                       <img src={rcircle} alt="" />
                     </div>
@@ -65,8 +65,8 @@ const Whoweare = () => {
                     </div>
                   </div>
                 </Col>
-                <Col xs="12" sm="6" className="pcongrid">
-                  <div className="pconinfosemigrid">
+                <Col xs="12" sm="6" className="diffsmallgrid">
+                  <div className="diffinfosemigrid">
                     <div>
                       <img src={rcircle} alt="" />
                     </div>
@@ -78,8 +78,8 @@ const Whoweare = () => {
                     </div>
                   </div>
                 </Col>
-                <Col xs="12" sm="6" className="pcongrid">
-                  <div className="pconinfosemigrid">
+                <Col xs="12" sm="6" className="diffsmallgrid">
+                  <div className="diffinfosemigrid">
                     <div>
                       <img src={rcircle} alt="" />
                     </div>

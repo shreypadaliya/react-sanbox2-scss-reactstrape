@@ -65,12 +65,12 @@ const Proudoff = () => {
 
     // Set intervals to animate numbers
     animateNumber(setCompletedProjects, targetValues.completedProjects, 20, 10);
-    animateNumber(setRevenueGrowth, targetValues.revenueGrowth, 100, 0.1);
+    animateNumber(setRevenueGrowth, targetValues.revenueGrowth, 100, 1);
     animateNumber(
       setCustomerSatisfaction,
       targetValues.customerSatisfaction,
-      50,
-      0.1
+      20,
+      1
     );
   }, []);
 

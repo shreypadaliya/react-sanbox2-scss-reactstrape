@@ -39,32 +39,32 @@ const Header = () => {
           className={`navlinkholder ${isMenuOpen ? "active" : ""}`}
         >
           <div className="navlinkdiv">
-            <a href="#" className="navlink">
+            <a href="#demos" className="navlink">
               Demos
             </a>
           </div>
           <div className="navlinkdiv">
-            <a href="#" className="navlink">
+            <a href="#pages" className="navlink">
               Pages
             </a>
           </div>
           <div className="navlinkdiv">
-            <a href="#" className="navlink">
+            <a href="#projects" className="navlink">
               Project
             </a>
           </div>
           <div className="navlinkdiv">
-            <a href="#" className="navlink">
+            <a href="#blog" className="navlink">
               Blog
             </a>
           </div>
           <div className="navlinkdiv">
-            <a href="#" className="navlink">
+            <a href="#blocks" className="navlink">
               Blocks
             </a>
           </div>
           <div className="navlinkdiv">
-            <a href="#" className="navlink">
+            <a href="#documentation" className="navlink">
               Documentation
             </a>
           </div>

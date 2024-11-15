@@ -74,7 +74,7 @@ const Carousel = () => {
 
   return (
     <>
-      <div className="casestudy-section" data-aos="fade-up">
+      <div className="casestudy-section" data-aos="fade-up" id="projects">
         <h6 className="casemainwrahead">Case Studies</h6>
         <h2 className="casemainwrapara">
           Check out some of our awesome projects with creative ideas and great

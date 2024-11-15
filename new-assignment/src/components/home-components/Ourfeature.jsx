@@ -4,7 +4,7 @@ import { Icon } from "../../components/common-componets/Svgicon";
 
 const Ourfeature = () => {
   return (
-    <section className="ourfeature-section">
+    <section className="ourfeature-section" id="demos">
       <div className="ourfeaturesemimain">
         <h6>Our Features</h6>
         <h2 className="ourfeaturesub">

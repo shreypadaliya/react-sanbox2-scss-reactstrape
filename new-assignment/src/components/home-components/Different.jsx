@@ -24,7 +24,7 @@ const Different = () => {
   return (
     <>
       <Container>
-        <section className="difference-section" data-aos="fade-up">
+        <section className="difference-section" data-aos="fade-up" id="pages">
           <div className="diffsemimain">
             <div className="difference-left-section">
               <h6 className="pconinfohead">What Makes Us Different?</h6>

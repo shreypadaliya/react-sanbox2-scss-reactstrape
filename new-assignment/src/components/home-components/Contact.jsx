@@ -6,7 +6,7 @@ import { Icon } from "../../components/common-componets/Svgicon";
 const Contact = () => {
   return (
     <Container>
-      <section className="contact-section" data-aos="fade-up">
+      <section className="contact-section" data-aos="fade-up" id="blocks">
         <div className="contact-left-section">
           <img src={cintactimg} alt="" className="conimg" />
         </div>

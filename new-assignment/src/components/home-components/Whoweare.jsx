@@ -10,7 +10,7 @@ const Whoweare = () => {
   return (
     <>
       <Container>
-        <section className="whoweare-section" data-aos="fade-up">
+        <section className="whoweare-section" data-aos="fade-up" id="blog">
           <div className="whoweare-left-imagesection">
             <div className="whowrap1">
               <div>

@@ -19,7 +19,7 @@ const Joincom = () => {
   };
   return (
     <Container>
-      <div className="joincomunity-section" data-aos="fade-up">
+      <div className="joincomunity-section" data-aos="fade-up" id="documentation">
         <div className="joincomunity-content-wraper">
           <h6 className="joinchead">Join Our Community</h6>
           <h2 className="joincomsubhead">
